@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Página Acessível com ARIA</title>
+</head>
+<body>
+
+  <h1>Página Acessível com ARIA</h1>
+
+  <h2>Exemplo de página acessível com ARIA</h2> 
+
+  <!-- Imagem-->
+  <div class="figura">
+    
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpwwqdTOACe4JDLf80FEYCPQVaT1VJ189wXw&usqp=CAU" alt="Imagem ARIA">
+
+  </div>
+
+  <!-- Containers com Seções de Texto -->
+  <div class="container">
+    <button onclick="toggleVisibility('section1')">Mostrar/Ocultar Seção 1</button>
+    <div id="section1" class="hidden">
+      <h2>Seção 1</h2>
+      <p>
+        Um acordeão é um conjunto de seções de conteúdo interativas empilhadas verticalmente.
+        Cada seção possui um título, <br>que funciona como um controle para revelar ou ocultar o conteúdo.
+        <br>Acordeões são usados ​​para reduzir a necessidade de rolagem em páginas com várias seções.
+        <br>Os termos para entender acordeões incluem cabeçalho (título) e painel (conteúdo).
+        <br>Alguns acordeões podem ter elementos adicionais, como botões de menu ou trechos de conteúdo visíveis.</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <button onclick="toggleVisibility('section2')">Mostrar/Ocultar Seção 2</button>
+    <div id="section2" class="hidden">
+      <h2>Seção 2</h2>
+      <p>WAI-ARIA suporta dois tipos de widgets de caixa de seleção : 
+        <br>caixas de seleção de estado duplo alternam entre duas opções - marcadas e não marcadas - e caixas de seleção de três estados, 
+        <br>que permitem um terceiro estado adicional conhecido como parcialmente verificado.
+        <br>Um uso comum de uma caixa de seleção de três estados pode ser encontrado em instaladores de software onde uma única caixa de seleção de três estados<br> é usada para representar e controlar o estado de um grupo inteiro de opções de instalação. 
+        <br>E cada opção do grupo pode ser ativada ou desativada individualmente com uma caixa de seleção de estado duplo.
+      </p>
+
+       <!-- Caixa de Seleção com 5 Itens -->
+  <label for="selecao">Selecione uma opção:</label>
+  <select id="selecao">
+    <option value="item1">Item 1</option>
+    <option value="item2">Item 2</option>
+    <option value="item3">Item 3</option>
+    <option value="item4">Item 4</option>
+    <option value="item5">Item 5</option>
+  </select><p>
+    </div>
+  </div>
+
+  <div class="container">
+    <button onclick="toggleVisibility('section3')">Mostrar/Ocultar Seção 3</button>
+    <div id="section3" class="hidden">
+      <h2>Seção 3</h2>
+      <p>Um alerta é um elemento que exibe uma mensagem breve e importante de forma a atrair a atenção do usuário sem interromper sua tarefa. 
+        <br>Alertas renderizados dinamicamente são anunciados automaticamente pela maioria dos leitores de tela e, em alguns sistemas operacionais, podem acionar um som de alerta.
+        <br>Um botão é um widget que permite aos usuários acionar uma ação ou evento, como enviar um formulário, abrir uma caixa de diálogo, cancelar uma ação ou executar uma operação de exclusão. 
+        <br>Uma convenção comum para informar aos usuários que um botão inicia uma caixa de diálogo é anexar "…" (reticências) ao rótulo do botão, por exemplo, "Salvar como…".</p>
+    </div>
+  </div>
+
+  <!-- Campo para Digitar Mensagem e Alerta para Clicar em Botão de Enviar -->
+  <label for="mensagem">Digite sua mensagem:</label><p>
+  <textarea id="mensagem" rows="4" cols="50"></textarea><p>
+  <button onclick="showAlert()">Enviar</button>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
